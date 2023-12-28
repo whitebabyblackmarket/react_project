@@ -1,0 +1,92 @@
+/* TO DO: intigrate the front end into Azure  */
+.App {
+  background-color: #282c34;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto;
+}
+
+html, body {
+  background-color: #282c34;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  width: 100%; /* Full width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* New styles for image preview */
+.image-upload-container {
+  margin-bottom: 40px; /* Increased space between boxes */
+  position: relative; /* Needed for absolute positioning of the file input */
+}
+
+.image-preview {
+  width: 200px; /* Increased width */
+  height: 200px; /* Increased height */
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-preview button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Styling the file input button */
+input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0; /* Hide the default file input */
+  cursor: pointer;
+}
