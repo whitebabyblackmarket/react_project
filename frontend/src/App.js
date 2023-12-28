@@ -22,7 +22,8 @@ function App() {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
+  
+    const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
     const formData = new FormData();
     if (sourceImage) formData.append('source_image', sourceImage);
     formData.append('source_image_url', sourceImageUrl);
@@ -31,7 +32,7 @@ function App() {
     formData.append('prompt', prompt);
     formData.append('negative_prompt', negativePrompt);
 
-    const response = await fetch('http://localhost:8000/run_face_swap/', {
+    const response = await fetch(`${apiUrl}/run_face_swap/`, {
       method: 'POST',
       body: formData,
     });
